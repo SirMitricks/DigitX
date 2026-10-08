@@ -1,0 +1,76 @@
+@import "../../../assets/mixins";
+.main {
+  width: 100%;
+  height: auto;
+  @include DisplayFlex;
+
+  section {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .containerText2{
+      width: 100%;
+      height: auto;
+
+    }
+    .containerText {
+      width: 90%;
+      height: auto;
+      margin: 50px;
+      @include DisplayFlexColumn;
+
+      p {
+        &:nth-child(1) {
+          @include TitleTextSection;
+          text-align: center;
+
+          span {
+            color: rgba(102, 102, 102, 1);
+          }
+        }
+
+        &:nth-child(2) {
+          text-align: center;
+          @include SubTitle;
+        }
+      }
+    }
+    .contcard{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .ccard{
+        width: 90%;
+        height: auto;
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid rgba(102, 102, 102, 1);
+        .right{
+          width: 36%;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @include CardTextTitle;
+        }
+        ul{
+          width: 50%;
+          height: auto;
+          border: 1px solid rgba(102, 102, 102, 1);
+          border-radius: 20px;
+          padding: 50px;
+          li{
+            @include MapSubTitleText;
+          }
+        }
+      }
+    }
+  }
+}

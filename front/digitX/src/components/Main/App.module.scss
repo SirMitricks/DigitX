@@ -1,0 +1,6 @@
+@import "../../assets/mixins";
+.mainContainer{
+    width:99vw;
+    height:auto;
+    @include DisplayFlexColumn;
+}

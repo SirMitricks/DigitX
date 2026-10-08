@@ -1,0 +1,128 @@
+@import "../../../assets/mixins";
+
+.main {
+  width: 100%;
+  height: auto;
+  @include DisplayFlex;
+
+  section {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .containerText {
+      width: 90%;
+      height: auto;
+      margin: 50px;
+      @include DisplayFlexColumn;
+
+      p {
+        &:nth-child(1) {
+          @include TitleTextSection;
+          text-align: center;
+
+          span {
+            color: rgba(102, 102, 102, 1);
+          }
+        }
+
+        &:nth-child(2) {
+          text-align: center;
+          @include SubTitle;
+        }
+      }
+    }
+    .container{
+      width: 100%;
+      height: 1380px;
+      display: grid;
+      grid-template-columns: repeat(2, 3fr);
+      gap: 30px;
+
+      .card{
+        width: 80%;
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        border-radius: 20px;
+        border: 1px solid rgba(102, 102, 102, 1);
+        .top{
+          width: 90%;
+          height: 66px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "Sora", sans-serif;
+          font-size: 18px;
+          color: white;
+          img{
+            width: 66px;
+            height: 66px;
+          }
+        }
+        .mid{
+          width: 90%;
+          height: 90px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-family: "Sora", sans-serif;
+          padding: 20px;
+          border-radius: 20px;
+          border: 1px solid rgba(102, 102, 102, 1);
+          .cord{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            border-right: 1px solid rgba(102, 102, 102, 1);
+            padding: 20px;
+            &:nth-child(2){
+              border-right: none;
+            }
+            p{
+              &:nth-child(1){
+                font-size: 18px;
+                font-family: "Sora", sans-serif;
+                color: #666666;
+
+              }
+              &:nth-child(2){
+                font-size: 20px;
+                font-family: "Sora", sans-serif;
+                color: white;
+              }
+            }
+          }
+        }
+        .bot{
+          width: 90%;
+          height: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-radius: 20px;
+          border: 1px solid rgba(102, 102, 102, 1);
+          padding: 20px;
+          p{
+            &:nth-child(1){
+              font-size: 22px;
+              font-family: "Sora", sans-serif;
+              color: white;
+            }
+            &:nth-child(2){
+              font-size: 18px;
+              font-family: "Sora", sans-serif;
+              color: #666666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

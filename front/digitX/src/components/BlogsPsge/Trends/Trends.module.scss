@@ -1,0 +1,64 @@
+@import "../../../assets/mixins";
+.main{
+  width: 100%;
+  height: auto;
+  @include DisplayFlex;
+  .section{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    .title{
+      width: 48%;
+      height: 515px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .containerText{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          &:nth-child(1){
+            @include MapTitleText;
+          }
+          &:nth-child(2){
+            @include MapSubTitleText;
+          }
+        }
+      }
+      .bot{
+        width: 100%;
+        height: 123px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: #1F1F1F 1px solid;
+        border-radius: 20px;
+        padding: 20px;
+        .textcont{
+          width: 100%;
+          padding: 20px;
+          border-right: #1F1F1F 1px solid;
+          &:nth-child(4){
+            border-right: none;
+          }
+          p{
+            &:nth-child(1){
+              @include MapSubTitleText;
+              font-size: 16px;
+            }
+            &:nth-child(2){
+              @include MapTitleText;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

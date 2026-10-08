@@ -1,0 +1,102 @@
+@import "../../../assets/mixins";
+.main {
+  width: 100%;
+  height: auto;
+  @include DisplayFlex;
+
+  section {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .containerText2 {
+      width: 100%;
+      height: auto;
+
+    }
+
+    .containerText {
+      width: 90%;
+      height: auto;
+      margin: 50px;
+      @include DisplayFlexColumn;
+
+      p {
+        &:nth-child(1) {
+          @include TitleTextSection;
+          text-align: center;
+
+          span {
+            color: rgba(102, 102, 102, 1);
+          }
+        }
+
+        &:nth-child(2) {
+          text-align: center;
+          @include SubTitle;
+        }
+      }
+    }
+
+    .contcard {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      border: 1px solid #1F1F1F;
+      border-radius: 20px;
+
+      img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .ccard {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .card {
+          width: 90%;
+          height: 359px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid #1F1F1F;
+          border-radius: 20px;
+          margin: 20px;
+
+          img {
+            width: 100%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+          }
+
+          .conttext {
+            width: 90%;
+            height: 259px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            p {
+              &:nth-child(1) {
+                @include MapTitleText;
+              }
+
+              &:nth-child(2) {
+                @include MapSubTitleText;
+              }
+            }
+          }
+        }
+      }
+    }
+  }}

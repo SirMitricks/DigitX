@@ -1,0 +1,49 @@
+@import '../assets/mixins';
+
+header{
+  width: 100%;
+  height: 90px;
+  @include DisplayFlex;
+  background-color: rgba(15, 15, 15, 0.2);
+  border-bottom: 1px solid rgba(31, 31, 31, 1);
+
+  div{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+      width: 73px;
+      height: 54px;
+    }
+    div{
+      width: 51%;
+      height: 55px;
+      @include FontButton;
+      a{
+        padding: 0 1rem;
+        border: 1px solid transparent;
+        text-decoration: none;
+        color: #fff;
+        @include DisplayFlex;
+        @include CursorPointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  header{
+    div{
+      div{
+        width: 50%;
+        height: 55px;
+        @include FontButtonMedia1440;
+        p{
+          @include CursorPointer;
+        }
+      }
+    }
+  }
+
+}

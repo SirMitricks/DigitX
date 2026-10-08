@@ -1,0 +1,72 @@
+@import "../../../assets/mixins";
+.main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    .contc{
+      width: 85%;
+      height: 734px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .text{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .lefrc{
+          width: 30%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          p{
+            @include MapTitleText;
+            font-size: 20px;
+          }
+        }
+        .rightc{
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          p{
+            @include MapSubTitleText;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: #1F1F1F 1px solid;
+            border-radius: 50px;
+            padding: 10px;
+          }
+        }
+      }
+      .mid{
+        width: 90%;
+        height: 104px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          &:nth-child(1){
+            @include MapTitleText;
+          }
+          &:nth-child(2){
+            @include MapSubTitleText;
+          }
+        }
+      }
+      button{
+
+        max-width: 166px;
+        @include ButtonBlack;
+      }
+    }
+  }
+}

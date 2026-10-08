@@ -1,0 +1,301 @@
+@import '../../../assets/mixins';
+
+.web-design-section {
+  width: 100%;
+  height: 3300px;
+
+  .content-wrapper {
+    max-width: 100%;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .nav-button {
+      width: 17vw;
+      height: 76px;
+      padding: 15px 10px;
+      background: transparent;
+      border: 2px solid rgba(26, 26, 26, 1);
+      border-radius: 8px;
+      font-size:14px;
+      font-weight: 600;
+      color: #ffffff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+
+      &:hover {
+        background: rgba(26, 26, 26, 1);
+        color: #ffffff;
+      }
+    }
+  }
+
+  .content-display {
+    width: 62vw;
+    height: auto;
+
+
+    .content-card {
+      height: 3300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .one-section{
+        width: 100%;
+        height: 164px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          &:nth-child(1){
+            @include MapTitleText
+          }
+          &:nth-child(2){
+            @include MapSubTitleText
+          }
+        }
+      }
+    .two-section{
+      padding: 60px;
+      width: 90%;
+      height: 608px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border: 1px solid rgba(31, 31, 31, 1);
+      border-radius: 20px;
+      p{
+        @include MapTitleText
+      }
+      .container-section{
+        width: 100%;
+        height: 416px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .cont-card{
+          width: 100%;
+          height: 130px;
+          display: flex;
+          justify-content: space-between;
+          .card-section{
+            width: 50%;
+            height: 100%;
+            padding: 20px;
+            &:nth-child(2){
+              border-left:1px solid #1F1F1F;
+            }
+            p{
+              &:nth-child(1){
+                @include MapTitleText
+              }
+              &:nth-child(2){
+                @include MapSubTitleText;
+              }
+            }
+          }
+        }
+        p{
+          @include MapSubTitleText
+        }
+      }
+    }
+      .three-section{
+        padding: 60px;
+        width: 90%;
+        height: 784px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid rgba(31, 31, 31, 1);
+        border-radius: 20px;
+        .title-section{
+          width: 100%;
+          height: 110px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          p{
+            &:nth-child(1){
+              @include MapTitleText
+            }
+            &:nth-child(2){
+              @include MapSubTitleText
+            }
+          }
+        }
+        .container-section{
+          width: 100%;
+          height: 524px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .cont-card{
+            width: 100%;
+            height: 170px;
+            display: flex;
+            justify-content: space-between;
+            .card-section{
+              width: 50%;
+              height: 100%;
+              padding: 20px;
+              &:nth-child(2){
+                border-left:1px solid #1F1F1F;
+              }
+              p{
+                &:nth-child(1){
+                  @include MapTitleText
+                }
+                &:nth-child(2){
+                  @include MapSubTitleText;
+                }
+              }
+            }
+          }
+          p{
+            @include MapSubTitleText
+          }
+        }
+      }
+      .four-section{
+        padding: 60px;
+        width: 90%;
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid rgba(31, 31, 31, 1);
+        border-radius: 20px;
+        .title-section{
+          width: 100%;
+          height: 110px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          p{
+            &:nth-child(1){
+              @include MapTitleText
+            }
+            &:nth-child(2){
+              @include MapSubTitleText
+            }
+          }
+        }
+        .imgcont{
+          width: 100%;
+          height: 362px;
+          display: flex;
+          flex-direction: column;
+
+          button{
+            max-width: 233px;
+            max-height: 64px;
+            @include TransparentButton;
+            position: relative;
+            left: 320px;
+            bottom: 50px;
+          }
+        }
+      }
+      .five-section{
+        padding: 60px;
+        width: 90%;
+        height: 593px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid rgba(31, 31, 31, 1);
+        border-radius: 20px;
+        .title-section{
+          width: 100%;
+          height: 110px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          p{
+            &:nth-child(1){
+              @include MapTitleText
+            }
+            &:nth-child(2){
+              @include MapSubTitleText
+            }
+          }
+        }
+        .Table{
+          width: 100%;
+          height: 333px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          .title-sectioncc{
+            width: 100%;
+            height: 72px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid rgba(31, 31, 31, 1);
+            border-radius: 20px;
+            p{
+              padding: 20px;
+              color: white;
+              font-weight: bold;
+              font-family: "Sora", sans-serif;
+              font-size: 20px;
+              border-right: 1px solid rgba(31, 31, 31, 1);
+              &:nth-child(3){
+                border-left: 1px solid rgba(31, 31, 31, 1);
+                border-right: none;
+              }
+            }
+          }
+          .table-c{
+            width: 100%;
+            height: 225px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-radius: 20px;
+            p{
+              font-size: 18px;
+              color: #8C8C8C;
+              font-family: "Sora", sans-serif;
+              border: 1px solid rgba(31, 31, 31, 1);
+              padding: 20px;
+              &:nth-child(1){
+                border-top-left-radius: 20px;
+
+              }
+              &:nth-child(7){
+                border-bottom-left-radius: 20px;
+
+              }
+            }
+            a{
+              font-size: 18px;
+              color: #8C8C8C;
+              font-family: "Sora", sans-serif;
+              text-decoration: none;
+              border: 1px solid rgba(31, 31, 31, 1);
+              padding: 20px;
+              &:nth-child(3){
+
+              border-top-right-radius: 20px;
+              }
+              &:nth-child(9){
+
+                border-bottom-right-radius: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

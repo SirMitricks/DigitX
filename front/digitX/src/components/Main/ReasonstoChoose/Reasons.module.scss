@@ -1,0 +1,143 @@
+@import "../../../assets/mixins";
+
+.ContainerMain{
+  width: 100%;
+  height: 1500px;
+  @include DisplayFlex;
+  section{
+    width: 90%;
+    height: 1190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .containerText{
+      width: 90%;
+      height: 218px;
+      @include DisplayFlexColumn;
+      p{
+        &:nth-child(1){
+          @include TitleTextSection;
+          text-align: center;
+          span{
+            color: rgba(102, 102, 102, 1);
+          }
+        }
+        &:nth-child(2){
+          text-align: center;
+          @include SubTitle;
+        }
+      }
+    }
+    .containerCard{
+      width: 100%;
+      height: 872px;
+      @include DisplayFlexColumn;
+      .Card{
+        width: 100%;
+        height: 386px;
+        display: flex;
+        justify-content: space-between;
+        .line{
+
+          height: 100%;
+          border: 1px solid rgba(31, 31, 31, 1);
+        }
+        .card{
+          width: 30%;
+          height: 100%;
+
+          @include DisplayFlexColumn;
+            p {
+              &:nth-child(2) {
+                @include CardTextTitle;
+                text-align: center;
+              }
+
+              &:nth-child(3) {
+                @include SubTitle;
+                text-align: center;
+              }
+            }
+            button {
+              width: 252px;
+              height: 84px;
+              background-color: transparent;
+              border: 1px solid rgba(31, 31, 31, 1);
+              border-radius: 100px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              font-size: 18px;
+              font-family: "Sora", sans-serif;
+              img {
+                @include ButtonBlack;
+              }
+            }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1440px) {
+  .ContainerMain{
+    height: 1400px;
+    section{
+      height: 1100px;
+      .containerText{
+        height: 120px;
+        p{
+          &:nth-child(1){
+            @include TitleTextMedia1440;
+            text-align: center;
+            span{
+              color: rgba(102, 102, 102, 1);
+            }
+          }
+          &:nth-child(2){
+            text-align: center;
+            @include SubTitleMedia1440;
+          }
+        }
+      }
+      .containerCard{
+        .Card{
+          .line{
+            height: 100%;
+            border: 1px solid rgba(31, 31, 31, 1);
+          }
+          .card{
+            p {
+              &:nth-child(2) {
+                @include CardTextTitleMedia1440;
+                text-align: center;
+              }
+
+              &:nth-child(3) {
+                @include SubTitleMedia1440;
+                text-align: center;
+              }
+            }
+            button {
+              width: 252px;
+              height: 84px;
+              background-color: transparent;
+              border: 1px solid rgba(31, 31, 31, 1);
+              border-radius: 100px;
+              color: white;
+              display: flex;
+              align-items: center;
+              justify-content: space-around;
+              font-size: 14px;
+              font-family: "Sora", sans-serif;
+              img {
+                @include ButtonBlack;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

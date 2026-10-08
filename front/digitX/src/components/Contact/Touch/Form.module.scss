@@ -1,0 +1,124 @@
+@import "../../../assets/mixins";
+
+.containerCite {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  section {
+    width: 90%;
+
+    .textcite {
+      text-align: center;
+      margin-bottom: 40px;
+
+      p {
+        &:first-child {
+          @include CardTextTitle;
+        }
+
+        &:last-child {
+          @include SubTitle;
+        }
+      }
+    }
+    .form{
+      width: 100%;
+      height: 784px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border: #1F1F1F 1px solid;
+      border-radius: 20px;
+      padding: 25px;
+      .continput{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .in{
+          width: 360px;
+          height: 108px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          p{
+            @include MapSubTitleText;
+            color: white;
+          }
+          input{
+            width: 100%;
+            height: 67px;
+            background: transparent;
+            border: 1px solid #1F1F1F;
+            border-radius: 50px;
+          }
+        }
+        .insel{
+          width: 360px;
+          height: 108px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          p{
+            &:nth-child(1){
+              @include MapSubTitleText;
+              color: white;
+            }
+            &:nth-child(2){
+              width: 100%;
+              height: 67px;
+              background: transparent;
+              border: 1px solid #1F1F1F;
+              border-radius: 50px;
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              color: #666666;
+              font-family: "Sora", sans-serif;
+
+              img{
+                width: 24px;
+                height: 24px;
+              }
+            }
+          }
+        }
+
+      }
+      .mec{
+         width: 90%;
+         height: 194px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         p{
+           @include MapSubTitleText;
+           color: white;
+         }
+         input{
+           width: 100%;
+           height: 153px;
+           background: transparent;
+           border: 1px solid #1F1F1F;
+           border-radius: 50px;
+         }
+       }
+      button{
+        width: 243px;
+        height: 64px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include ButtonBlack;
+        color: white;
+        img{
+          width: 28px;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
